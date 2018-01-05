@@ -1,0 +1,35 @@
+/*style for the progress bar*/
+#steps{
+  margin:30px;
+}
+
+.main-container{
+  border-style:solid;
+  border-radius: 10px;
+  margin-left:2%;
+  margin-right:2%;
+  padding:20px;
+}
+
+/*style for the user role buttons*/
+button{
+  padding:10px;
+}
+
+/*
+.role-selection{
+  display:none;
+}
+*/
+
+/*
+.dept-selection{
+  display:none;
+}
+*/
+
+/*
+.src-selection{
+  display:none;
+}
+*/

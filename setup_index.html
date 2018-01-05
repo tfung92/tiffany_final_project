@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--DEVELOPED DECEMBER 2017-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Set Up Your Dashboard</title>
+  <meta name="Tiffany Fung" content="configure data management portal">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/jquery.progressbar.css">
+  <link rel="stylesheet" href="css/setup.css">
+</head>
+
+<body>
+<!--steps is the container for the progress bar-->
+  <div id="steps"></div>
+<!--container containing all selection questions-->
+  <div class = "main-container">
+<!--container containing the role selection buttons-->
+  <div class = "role-selection" id = "role-select">
+    <h2>To get started, please answer a few questions to customize your dashboard.</h2>
+    <button>
+      <h3>Do you oversee a department?</h3>
+      <p>Do you desire to see the overall health of the data</p>
+    </button>
+    <button>
+      <h3>Do you oversee an application team?</h3>
+      <p>Do you desire to see the health of your teams' specific data</p>
+    </button>
+    <button>
+      <h3>Are you a data owner?</h3>
+      <p>Do you desire to see your specific data details</p>
+    </button>
+  </div>
+
+<!--container containing the department selection box-->
+  <div class = "dept-selection" id = "dept-select">
+    <h2>Select your department in order to focus your dashboard data.</h2>
+    <div class = "selection-container">
+    <select multiple class = "multi-select-dept" id = "multi-select">
+      <option value="cc">Credit Card</option>
+      <option value="cml_bank">Commercial Bank</option>
+      <option value="mktg">Marketing</option>
+      <option value="hr">HR</option>
+    </select>
+    <button class = "add-button" id = "add-btn">Add</button>
+  </div>
+    <output class = "display-box" id = "display">You have selected: </br></output>
+  </div>
+
+<!--container containing the source selection box-->
+  <div class = "src-selection" id = "src-select">
+    <h2>Select a source if you would like to further focus your dashboard data.</h2>
+    <div class = "selection-container">
+    <select multiple class = "multi-select-src" id = "multi-select">
+      <option value="src1">Source 1</option>
+      <option value="src2">Source 2</option>
+      <option value="src3">Source 3</option>
+      <option value="src4">Source 4</option>
+    </select>
+    <button class = "add-button" id = "add-btn">Add</button>
+  </div>
+    <output class = "display-box" id = "display">You have selected: </br></output>
+  </div>
+  <div class = "footer=-buttons" id = "footer-btn">
+  <button class = "back-pg">Previous Page</button>
+  <button class = "nxt-pg">Next Page</button>
+</div>
+  <!--container for finish page-->
+    <div class = "finish-pg" id = "finish-pg">
+      <h2>The setup is complete!</h2>
+      <button class = "nxt-pg">Enter Dashboard</button>
+    </div>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  <script src="js/jquery.progressbar.js"></script>
+  <script src="js/setup_page.js"></script>
+</body>
+</html>

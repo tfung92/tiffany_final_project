@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--DEVELOPED DECEMBER 2017-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Manage Your Data</title>
+  <meta name="Tiffany Fung" content="data management portal">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" media="screen and (min-width: 1200px)" href="css/1200bigscreen.css">
+  <link rel="stylesheet" href="css/flickity.min.css" media="screen">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<!--SET HEADER WITH LOGO-->
+    <header class = "nav_header">
+      <img src="http://www.hanzolabs.com/img/datamanagement.jpg" class = "logo">
+      <h1 class = "title">Data Management Dashboard</h1>
+    </header>
+<!--SET MAIN CONTAINER FOR THE WEBPAGE-->
+  <div class = "container">
+<!--SET LEFT HAND NAVIGATION PANEL WITH LINKS TO DIFFERENT PAGES-->
+      <nav class = "left_hand_nav">
+        <p>Welcome, User! </br>Data Refreshed:</p>
+        <button class = "dashLink"><a href="" id = "nav_links">Dashboard</a></button></br>
+        <button class = "NotifLink"><a href="" id = "nav_links">Notification</a></button></br>
+        <button class = "SettingLink"><a href="" id = "nav_links">Settings</a></button></br>
+        <button class = "LogOutLink"><a href="" id = "nav_links">Logout</a></button><br>
+      </nav>
+<!--MAIN CENTER CONTAINER CONTAINS ALERT ITEM SECTION CONTAINING ITEM BUCKETS AND TREND GRAPH CONTAINER-->
+  <div class = "center_container">
+      <section class = "alert_container">
+<!--Each bucket is a clickable button that leads to drill down pages-->
+        <button class = "operationsBucket" id = "nav_bucket"> <a href="">Operations<span class = "operationsTooltip">&#63;</span></br>xx out of xx</button>
+        <button class = "insightsBucket" id = "nav_bucket"> <a href="">Insights<span class = "insightsTooltip">&#63;</span></br>xx out of xx</button>
+        <button class = "workflowBucket" id = "nav_bucket"> <a href="">Workflow<span class = "workflowLink">&#8594;</span></button>
+        <button class = "sourcesBucket" id = "nav_bucket"> <a href="">Sources<span class = "sourceTooltip">&#63;</span></br>xx out of xx</button>
+        <button class = "usage" id = "nav_bucket"> <a href="">Usage<span class = "usageTooltip">&#63;</span></br>xx out of xx</button>
+      </section>
+<!--MAIN LOWER SECTION OF PAGE CONTAINS PROGRESS TREND GRAPHS-->
+      <section class = "trend_container">
+        <p>TREND GRAPH HERE!</p>
+        <div class = "js-flickity" data-flickity='{ "wrapAround": true }'>
+          <iframe class ="cell1">iFrame1</iframe>
+          <iframe class ="cell2">iFrame2</iframe>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  <script src="js/flickity.pkgd.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
