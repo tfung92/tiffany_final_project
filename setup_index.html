@@ -17,21 +17,23 @@
 <!--container containing all selection questions-->
   <div class = "main-container">
 <!--container containing the role selection buttons-->
-  <div class = "role-selection" id = "role-select">
+  <form class = "role-selection" id = "role-select">
     <h2>To get started, please answer a few questions to customize your dashboard.</h2>
-    <button>
+    <fieldset>
+    <input type="button" value = "Executive" class = "button" id = "exec">
       <h3>Do you oversee a department?</h3>
       <p>Do you desire to see the overall health of the data</p>
-    </button>
-    <button>
+    </input>
+    <button class = "button" id ="mgr">
       <h3>Do you oversee an application team?</h3>
       <p>Do you desire to see the health of your teams' specific data</p>
     </button>
-    <button>
+    <button class = "button" id = "data">
       <h3>Are you a data owner?</h3>
       <p>Do you desire to see your specific data details</p>
     </button>
-  </div>
+  </fieldset>
+  </form>
 
 <!--container containing the department selection box-->
   <div class = "dept-selection" id = "dept-select">

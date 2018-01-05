@@ -6,9 +6,22 @@ $('#steps').progressbar({
   steps: ['@Role Selection (Current)', 'Department Selection', 'Source Selection', 'Finish Setup',]
 });
 
-//user clicks on a role button
-
-//user role stored
+//user clicks on a role button & user role stored
+var role;
+$(".role-selection .button").on("click", function(){
+  if (this.id == "exec"){
+    role = "exec";
+    console.log(role);
+  }
+  else if(this.id =="mgr"){
+    role = "mgr";
+    console.log(role);
+  }
+  else if(this.id =="data"){
+    role = "dataowner";
+    console.log(role);
+  }
+});
 
 //user clicks "next page": role selection container hidden and dept selection displayed; progressbar is set
 //$("#role-select").hide();
