@@ -16,20 +16,23 @@ button{
   padding:10px;
 }
 
-/*
+
 .role-selection{
   display:none;
 }
-*/
 
-/*
 .dept-selection{
   display:none;
 }
-*/
 
-/*
 .src-selection{
   display:none;
 }
-*/
+
+.finish-pg{
+  display:none;
+}
+
+.footer-buttons{
+  display:none;
+}
