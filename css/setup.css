@@ -3,36 +3,71 @@
   margin:30px;
 }
 
+body{
+  background-color: #FCFCFC;
+}
+
 .main-container{
   border-style:solid;
   border-radius: 10px;
+  border-color: #112D4E;
   margin-left:2%;
   margin-right:2%;
   padding:20px;
+  background-color: #DBE2EF;
 }
 
-/*style for the user role buttons*/
+/*style for the buttons*/
 button{
-  padding:10px;
+  margin:10px;
+  padding:8px;
+  border-radius: 5px;
+  border-color: #112D4E;
+  background-color: #112D4E;
+  color: #ffff;
 }
-
 
 .role-selection{
-  display:none;
+  display:flex;
+  justify-content:space-around;
+  align-items:flex-start;
 }
 
-.dept-selection{
-  display:none;
+.exec-container{
+  width:33%;
 }
 
-.src-selection{
-  display:none;
+.mgr-container{
+  width:33%;
 }
 
-.finish-pg{
-  display:none;
+.user-container{
+  width:33%;
 }
 
-.footer-buttons{
-  display:none;
+#exec{
+  height:100px;
+  width:100px;
+  background-image: url("../img/exec_icon.png");
+  background-size:cover;
+  background-color:transparent;
+  border-style:hidden;
+}
+
+#mgr{
+  height:100px;
+  width:100px;
+  background-image: url("../img/manager_icon.png");
+  background-size:cover;
+  background-color:transparent;
+  border-style:hidden;
+}
+
+#datauser{
+  height:100px;
+  width:100px;
+  background-image: url("../img/analyst_icon.png");
+  background-size:cover;
+  background-color:transparent;
+  border-style:hidden;
 }

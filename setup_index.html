@@ -23,20 +23,24 @@
   </div>
 <!--container containing the role selection buttons-->
   <form class = "role-selection" id = "role-select">
-    <fieldset>
-    <input type="button" value = "Executive" class = "button" id = "exec">
+    <div class = "exec-container">
+    <input type="button" class = "button" id = "exec">
       <h3>Do you oversee a department?</h3>
       <p>Do you desire to see the overall health of the data</p>
     </input>
-    <input type="button" value = "Manager" class = "button" id = "mgr">
+  </div>
+  <div class = "mgr-container">
+    <input type="button" class = "button" id = "mgr">
       <h3>Do you oversee an application team?</h3>
       <p>Do you desire to see the health of your teams' specific data</p>
-    </button>
-    <input type="button" value = "Data User" class = "button" id = "datauser">
+    </input>
+  </div>
+    <div class = "user-container">
+    <input type="button" class = "button" id = "datauser">
       <h3>Are you a data owner?</h3>
       <p>Do you desire to see your specific data details</p>
-    </button>
-  </fieldset>
+    </input>
+  </div>
   </form>
 
 <!--container containing the department selection box-->
@@ -75,10 +79,6 @@
       <button class = "nxt-pg" id = "nxt-pg">Next Page</button>
     </div>
     <div class = "footer-buttons" id = "next_btn2">
-      <button class = "back-pg" id = "back-pg">Previous Page</button>
-      <button class = "nxt-pg" id = "nxt-pg">Next Page</button>
-    </div>
-    <div class = "footer-buttons" id = "next_btn3">
       <button class = "back-pg" id = "back-pg">Previous Page</button>
       <button class = "nxt-pg" id = "nxt-pg">Next Page</button>
     </div>
