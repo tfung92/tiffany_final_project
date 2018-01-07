@@ -10,12 +10,14 @@ var counter = 0;
 switch (counter) {
   //case 0: user clicks on start button to move to role selection
   case 0: $('#start-btn').click(function(){
-    $('#steps').progressbar({
+  /*  $('#steps').progressbar({
       //notation as follows:
       // ~: step failed
       // @: current step
       steps: ['@Role Selection (Current)', 'Department Selection', 'Source Selection', 'Setup Completed',]
       });
+  */
+  
     $('#start-container').hide();
     $('#role-select').show();
     console.log("start button clicked");
@@ -39,12 +41,6 @@ switch (counter) {
       role = "dataowner";
       console.log(role);
     }
-    $('#steps').progressbar({
-      //notation as follows:
-      // ~: step failed
-      // @: current step
-      steps: ['Role Selection', '@Department Selection (Current)', 'Source Selection', 'Setup Completed',]
-      });
 
     $('#role-select').hide();
     $('#dept-select').show();

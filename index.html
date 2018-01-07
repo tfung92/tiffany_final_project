@@ -6,7 +6,6 @@
   <title>Manage Your Data</title>
   <meta name="Tiffany Fung" content="data management portal">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" href="css/flickity.min.css" media="screen">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -38,18 +37,37 @@
         <button class = "usage" id = "nav_bucket"> <a href="">Usage<span class = "usageTooltip">&#63;</span></br>xx out of xx</button>
       </section>
 <!--MAIN LOWER SECTION OF PAGE CONTAINS PROGRESS TREND GRAPHS-->
-      <section class = "trend_container">
-        <div class = "js-flickity" data-flickity='{ "wrapAround": true }'>
-          <iframe class ="cell1">iFrame1</iframe>
-          <iframe class ="cell2">iFrame2</iframe>
+<!--      <section class = "trend_container">
+        <div class = "main-carousel" data-flickity='{ "wrapAround": true }' data-flickity-options='{ "setGallerySize": true }'>
+          <div class = "carousel-cell iframe-wrap">
+            <iframe class ="iframe1" src="https://public.tableau.com/en-us/s/gallery/boeing-current-market-outlook?gallery=featured" frameborder="0"></iframe>
+            <div class="iframe-wrap__grippy"></div>
+            <div class="iframe-wrap__grippy"></div>
+          </div>
+          <div class = "carousel-cell">
+            <iframe class ="iframe2">iFrame2</iframe>
+          </div>
         </div>
       </section>
     </div>
-  </div>
+-->
+      <h1 class = "trend-title">Trend Graphs</h1>
+      <div class="main-carousel" data-flickity='{"freeScroll": true, "wrapAround": true, "initialIndex": 0, "resize": true, "draggable":true}'>
+         <div class="carousel-cell iframe-wrap">
+            <iframe
+            src="https://public.tableau.com/en-us/s/gallery/boeing-current-market-outlook?gallery=featured"
+            frameborder="0">
+            </iframe>
+            <div class="iframe-wrap__grippy"></div>
+            <div class="iframe-wrap__grippy"></div>
+        </div>
+        <div class="carousel-cell">Cell 2</div>
+        <div class="carousel-cell">Cell3</div>
+      </div>
+    </div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="js/flickity.pkgd.min.js"></script>
   <script src="js/main.js"></script>
 </body>

@@ -1,3 +1,4 @@
+/*
 //Request for latest progress trend graph and load
 $.ajax({
  type: 'POST',
@@ -19,10 +20,11 @@ $(document).ready(function(){
         $("#someFrame").attr("src", $(this).attr("href"));
     })
 });
+*/
+
 
 //Trend graph carousel
-$('.trend_container').flickity({
+$('.main-carousel').flickity({
   // options
-  cellAlign: 'left',
-  contain: true
+
 });
