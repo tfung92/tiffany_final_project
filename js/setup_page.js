@@ -4,20 +4,17 @@ $('#src-select').hide();
 $('#finish-pg').hide();
 $('#next_btn1').hide();
 $('#next_btn2').hide();
+$('.progress_txt').hide();
+$('#progress-status').hide();
 
 //Switch statement to move through the pages of the setup site
 var counter = 0;
 switch (counter) {
   //case 0: user clicks on start button to move to role selection
   case 0: $('#start-btn').click(function(){
-  /*  $('#steps').progressbar({
-      //notation as follows:
-      // ~: step failed
-      // @: current step
-      steps: ['@Role Selection (Current)', 'Department Selection', 'Source Selection', 'Setup Completed',]
-      });
-  */
-  
+    $('#progress-status').show();
+    $('.progress_txt').show();
+    $('#progress-status').val(25);
     $('#start-container').hide();
     $('#role-select').show();
     console.log("start button clicked");
@@ -42,6 +39,7 @@ switch (counter) {
       console.log(role);
     }
 
+    $('#progress-status').val(50);
     $('#role-select').hide();
     $('#dept-select').show();
     //user can search and click on one or more dept names
@@ -64,6 +62,7 @@ switch (counter) {
 
   //case 2: user clicks on next button to move to source selection; back and next buttons visible
   case 2: $('#next_btn1 #nxt-pg').click(function(){
+    $('#progress-status').val(75);
     $('#dept-select').hide();
     $('#src-select').show();
     //user clicks on one or more sources and clicks "add"
@@ -88,6 +87,7 @@ switch (counter) {
 
   //case 3: user clicks on next button to move to completion page; back and next buttons visible
   case 3: $('#next_btn2 #nxt-pg').click(function(){
+    $('#progress-status').val(100);
     $('#src-select').hide();
     $('#finish-pg').show();
     $('#next_btn2').hide();

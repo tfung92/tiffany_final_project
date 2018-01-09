@@ -1,20 +1,35 @@
-/*style for the progress bar*/
+/*style for the progress bar (original plugin)
 #steps{
   margin:30px;
-}
+}*/
 
 body{
   background-color: #FCFCFC;
+  font-family: 'Raleway', sans-serif;
+}
+
+.progress-bar{
+  width: 70%;
+  height: 20px;
+}
+
+.progress-bar::-webkit-progress-bar {
+  appearance: none;
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
 
 .main-container{
   border-style:solid;
   border-radius: 10px;
   border-color: #112D4E;
-  margin-left:2%;
-  margin-right:2%;
-  padding:20px;
+  margin-left:20%;
+  margin-top:8%;
+  padding:2%;
+  width:60%;
   background-color: #DBE2EF;
+  text-align: center;
 }
 
 /*style for the buttons*/
@@ -27,6 +42,10 @@ button{
   color: #ffff;
 }
 
+.start-container{
+  text-align: center;
+}
+
 .role-selection{
   display:flex;
   justify-content:space-around;
@@ -34,15 +53,18 @@ button{
 }
 
 .exec-container{
-  width:33%;
+  width:30%;
+  text-align: center;
 }
 
 .mgr-container{
-  width:33%;
+  width:30%;
+  text-align: center;
 }
 
 .user-container{
-  width:33%;
+  width:30%;
+  text-align: center;
 }
 
 #exec{

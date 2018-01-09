@@ -1,6 +1,7 @@
 body{
   font-size:12px;
-  background-color: #FCFCFC;
+  font-family: 'Raleway', sans-serif;
+  background-color: #EFEFEF;
 }
 
 /*style for the buttons*/
@@ -10,11 +11,21 @@ button{
   border-radius: 5px;
 }
 
-/*breakpoints for screen sizes 480-768, 769-max*/
-@media screen and (min-width: 480px) and (max-width: 768px) {
+/*breakpoints for screen sizes min-768, 769-max*/
+@media screen and (max-width: 768px) {
   .alert_container {
-    margin: 1%;
-    width: 48%;
+    width: 100%;
+  }
+  .left_hand_nav, .nav_header .title, .alert_container p{
+    display:none;
+  }
+  .alert_container #nav_bucket {
+    height:60px;
+    width:60px;
+  }
+  .alert_container .icon {
+    height:45px;
+    width:45px;
   }
 }
 
@@ -43,9 +54,11 @@ button{
   height:90px;
   display:flex;
   align-items:center;
-  color:white;
-  background-color: #0D1B4C;
+  text-align: center;
+  color:#333A56;
+  background-color: #E8E8E8;
   border-radius: 3px;
+  font-size: 28px;
 }
 
 .logo{
@@ -56,50 +69,75 @@ button{
   border-radius: 3px;
 }
 
-
 .container{
   display:flex;
-  margin:0px;
-  padding:12px;
-  background-color: #FCFCFC;
+  background-color: #EFEFEF;
   border-radius: 3px;
 }
 
 .left_hand_nav{
-  margin-left:5%;
   font-size:20px;
-  width:20%;
-  background-color: #78C2C3;
+  font-weight: bold;
+  width:18%;
+  background-color: #F7F5E6;
+  color:#333A56;
   height:100%;
   text-align:center;
   border-radius: 3px;
 }
 
 .left_hand_nav button{
-  width: 80%;
+  width: 70%;
+  margin-bottom:3px;
+  padding:3px;
+  background-color: #333A56;
+  color:#F7F5E6;
 }
 
-#nav_links{
-  margin-bottom:20%;
+#nav_links:link, #nav_links:active, #nav_links:hover, #nav_links:visited{
+  text-decoration: none;
+  color:#F7F5E6;
 }
 
 .center_container{
   width:100%;
 }
 
+.icon{
+  height:80px;
+  width:80px;
+}
+
 .alert_container{
+  height:170px;
   display:flex;
-  align-items:center;
+  align-items:flex-start;
   justify-content:space-around;
   flex-wrap:wrap;
-  background-color: #3F6699;
+  background-color: #A9A9A9;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
 
+.alert_container button{
+  height:100px;
+  width:100px;
+  background-color: #CDCDCD
+}
+
+.alert_container div{
+  display:flex;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content:center;
+  color:white;
+  font-size: 14px;
+  margin-top:5px;
+}
+
 #nav_bucket{
-  margin:3%;
-  padding:10px;
+  flex-wrap:wrap;
+  margin:2%;
   height:100px;
   font-size:18px;
   border-style:solid;

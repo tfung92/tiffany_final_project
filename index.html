@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Manage Your Data</title>
   <meta name="Tiffany Fung" content="data management portal">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300i,400,600" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
   <link rel="stylesheet" href="css/flickity.min.css" media="screen">
   <link rel="stylesheet" href="css/main.css">
@@ -20,7 +21,7 @@
   <div class = "container">
 <!--SET LEFT HAND NAVIGATION PANEL WITH LINKS TO DIFFERENT PAGES-->
       <nav class = "left_hand_nav">
-        <p>Welcome, User! </br>Data Refreshed:</p>
+        <p>Welcome, User! </br>Data Refreshed: 01/08/2018</p>
         <button class = "dashLink"><a href="" id = "nav_links">Dashboard</a></button></br>
         <button class = "NotifLink"><a href="" id = "nav_links">Notification</a></button></br>
         <button class = "SettingLink"><a href="" id = "nav_links">Settings</a></button></br>
@@ -30,11 +31,26 @@
   <div class = "center_container">
       <section class = "alert_container">
 <!--Each bucket is a clickable button that leads to drill down pages-->
-        <button class = "operationsBucket" id = "nav_bucket"> <a href="">Operations<span class = "operationsTooltip">&#63;</span></br>xx out of xx</button>
-        <button class = "insightsBucket" id = "nav_bucket"> <a href="">Insights<span class = "insightsTooltip">&#63;</span></br>xx out of xx</button>
-        <button class = "workflowBucket" id = "nav_bucket"> <a href="">Workflow<span class = "workflowLink">&#8594;</span></button>
-        <button class = "sourcesBucket" id = "nav_bucket"> <a href="">Sources<span class = "sourceTooltip">&#63;</span></br>xx out of xx</button>
-        <button class = "usage" id = "nav_bucket"> <a href="">Usage<span class = "usageTooltip">&#63;</span></br>xx out of xx</button>
+        <div class = "operationsBucket">
+          <button class = "operationsBucket" id = "nav_bucket"> <img src="img/operations_icon.png" alt = "operations_icon" class = "icon"></button>
+          <p>Operations<span class = "operationsTooltip"></span></br></p>
+        </div>
+        <div class = "insightsBucket">
+          <button class = "insightsBucket" id = "nav_bucket"> <img src="img/insights_icon.png" alt = "insights_icon" class = "icon"></button>
+          <p>Insights<span class = "insightsTooltip"></span></br></p>
+        </div>
+        <div class = "workflowBucket">
+          <button class = "workflowBucket" id = "nav_bucket"> <img src="img/workflow_icon.png" alt = "workflow_icon" class = "icon"></button>
+          <p>Workflow<span class = "workflowLink"></span></p>
+        </div>
+        <div class = "sourcesBucket">
+        <button class = "sourcesBucket" id = "nav_bucket"> <img src="img/source_icon.png" alt = "source_icon" class = "icon"></button>
+        <p>Sources<span class = "sourceTooltip"></span></br></p>
+      </div>
+      <div class = "usage">
+        <button class = "usage" id = "nav_bucket"> <img src="img/usage_icon.png" alt = "usage_icon" class = "icon"></button>
+        <p>Usage<span class = "usageTooltip"></span></br></p>
+      </div>
       </section>
 <!--MAIN LOWER SECTION OF PAGE CONTAINS PROGRESS TREND GRAPHS-->
 <!--      <section class = "trend_container">
