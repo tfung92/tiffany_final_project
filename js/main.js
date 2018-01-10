@@ -26,5 +26,9 @@ $(document).ready(function(){
 //Trend graph carousel
 $('.main-carousel').flickity({
   // options
-
+"freeScroll": true,
+"wrapAround": true,
+"initialIndex": 0,
+"resize": true,
+"draggable":true
 });

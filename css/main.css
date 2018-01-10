@@ -1,10 +1,11 @@
+/*initial style for the page*/
 body{
   font-size:12px;
   font-family: 'Raleway', sans-serif;
   background-color: #EFEFEF;
 }
 
-/*style for the buttons*/
+/*initial style for the buttons*/
 button{
   margin:10px;
   padding:8px;
@@ -16,7 +17,7 @@ button{
   .alert_container {
     width: 100%;
   }
-  .left_hand_nav, .nav_header .title, .alert_container p{
+  .nav_panel, .nav_header .title, .alert_container p{
     display:none;
   }
   .alert_container #nav_bucket {
@@ -37,28 +38,33 @@ button{
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  .left_hand_nav{
+  .nav_panel{
     margin: 1%;
     width: 48%;
   }
 }
 
 @media screen and (min-width: 769px) {
-  .left_hand_nav {
+  .nav_panel {
     margin:0px;
     width: 100%;
   }
 }
 
+/*Style for the top container containing logo, title, and date refreshed*/
 .nav_header{
   height:90px;
   display:flex;
+  justify-content: space-between;
   align-items:center;
-  text-align: center;
   color:#333A56;
-  background-color: #E8E8E8;
-  border-radius: 3px;
-  font-size: 28px;
+/*  border-radius: 3px;*/
+  font-size: 24px;
+  margin-right:10px;
+}
+
+.refreshed{
+  font-size: 14px;
 }
 
 .logo{
@@ -69,16 +75,19 @@ button{
   border-radius: 3px;
 }
 
+/*style for the main body container containing the navigation panel, alert container, and trend graph container*/
 .container{
   display:flex;
   background-color: #EFEFEF;
   border-radius: 3px;
+  margin-right:10px;
 }
 
-.left_hand_nav{
+/*style for navigation panel containing the navigation icons*/
+.nav_panel{
   font-size:20px;
   font-weight: bold;
-  width:18%;
+  width:10%;
   background-color: #F7F5E6;
   color:#333A56;
   height:100%;
@@ -86,7 +95,12 @@ button{
   border-radius: 3px;
 }
 
-.left_hand_nav button{
+.nav_icon{
+  height:50px;
+  width:50px;
+}
+
+.nav_panel button{
   width: 70%;
   margin-bottom:3px;
   padding:3px;
@@ -94,13 +108,22 @@ button{
   color:#F7F5E6;
 }
 
-#nav_links:link, #nav_links:active, #nav_links:hover, #nav_links:visited{
-  text-decoration: none;
-  color:#F7F5E6;
-}
-
 .center_container{
   width:100%;
+}
+
+/*test zoom*/
+.center_container:before{
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    width: 150%;
+    height: 150%;
+    top:-20px;
+    left:-20px;
 }
 
 .icon{
@@ -115,15 +138,56 @@ button{
   justify-content:space-around;
   flex-wrap:wrap;
   background-color: #A9A9A9;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-radius: 3px;
+
+/*test zoom*/
+-webkit-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+-moz-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
 }
 
 .alert_container button{
   height:100px;
   width:100px;
   background-color: #CDCDCD
-}
+  width:200px;
+/*test zoom*/
+    -webkit-animation:scaledown 1s linear;
+    -moz-animation:scaledown 1s linear;
+    animation:scaledown 1s linear;
+    transform-origin:50% 50%;
+    animation-fill-mode: forwards;
+  }
+
+.bucket:hover{
+    z-index:100;
+    -webkit-animation:scale .5s linear;
+    -moz-animation:scale .5s linear;
+    animation:scale .5s linear;
+    transform-origin:50% 50%;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes scale{
+    0%{
+      transform:scale(1.0);
+    }
+    100%{
+      transform:scale(1.1);
+      -webkit-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+  -moz-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+  box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+    }
+  }
+
+  @keyframes scaledown{
+    0%{
+      transform:scale(1.1);
+    }
+     100%{
+      transform:scale(1.0);
+    }
+  }
 
 .alert_container div{
   display:flex;
@@ -144,108 +208,26 @@ button{
   border-radius:10px;
 }
 
-/*
 .js-flickity{
-  padding-bottom: 33.3%; /* gallery height has percentage of width
+  padding-bottom: 33.3%; /* gallery height has percentage of width*/
   margin-right: 10px;
   border-radius: 5px;
   counter-increment: gallery-cell;
 }
 
 iframe{
-   width: 600px;
-   height: 400px;
+   width: 90%;
+   height: 90%;
    margin: 20px;
    background: #8C8;
    border-radius: 5px;
   counter-increment: carousel-cell;
-}*/
+}
 
-/*
 .carousel-cell {
   width: 66%;
-  height: 200px;
+  height: 1000px;
   margin-right: 10px;
-  background: #8C8;
   border-radius: 5px;
   counter-increment: carousel-cell;
-}
-
-/* cell number
-.carousel-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(carousel-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
-}
-*/
-
-/* grippy elements in front of iframe*/
-.iframe-wrap {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  iframe {
-    position: absolute;
-    top: 0;
-    left :0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-  }
-  &__grippy {
-    position: absolute;
-    left: 0;
-    width: 40%;
-    top: 32px;
-    bottom: 40px;
-    border: 2px solid green;
-    z-index: 3;
-
-    &:before {
-      position: absolute;
-      display: block;
-      content: '';
-      width: 60%;
-      height: 35%;
-      top: 0;
-      left: 100%;
-      border: 2px solid green;
-    }
-
-    + .iframe-wrap__grippy {
-      left: auto;
-      right: 0;
-      &:before {
-        bottom: 0;
-        top: auto;
-        right: 100%;
-        left: auto;
-      }
-    }
-  }
-}
-
-/* carousel formatting*/
-
-.trend-title {
-  text-align: center;
-}
-
-.main-carousel {
-  width: 500px;
-  height: 400px;
-  margin: auto;
-}
-
-.flickity-viewport, .flickity-slider {
-  height: 400px;
-}
-
-.carousel-cell {
-  background-color: lightblue;
-  width: 100%;
-  height: 400px;
 }

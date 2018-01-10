@@ -19,3 +19,12 @@ body{
   color:white;
   font-family: 'Raleway', sans-serif;
 }
+
+.input{
+  border-radius: 5px;
+}
+
+.login{
+  border-radius: 3px;
+  font-weight:bold;
+}
