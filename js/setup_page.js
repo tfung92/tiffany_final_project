@@ -1,28 +1,107 @@
-//jquery progressbar plugin for showing the set up step progress; set progressbar to step 1
-$('#steps').progressbar({
-  //notation as follows:
-  // ~: step failed
-  // @: current step
-  steps: ['@Role Selection (Current)', 'Department Selection', 'Source Selection', 'Finish Setup',]
-});
+$('#role-select').hide();
+$('#dept-select').hide();
+$('#src-select').hide();
+$('#finish-pg').hide();
+$('#next_btn1').hide();
+$('#next_btn2').hide();
+$('.progress_txt').hide();
+$('#progress-status').hide();
 
-//user clicks on a role button
+//Switch statement to move through the pages of the setup site
+var counter = 0;
+switch (counter) {
+  //case 0: user clicks on start button to move to role selection
+  case 0: $('#start-btn').click(function(){
+    $('#progress-status').show();
+    $('.progress_txt').show();
+    $('#progress-status').val(25);
+    $('#start-container').hide();
+    $('#role-select').show();
+    console.log("start button clicked");
+    console.log(counter);
+    counter++;
+  });
 
-//user role stored
+  //case 1: user clicks on executive or manager or data user button to move to department selection; back and next buttons visible
+  //user clicks on a role button & user role stored
+  case 1: $('#role-select .button').click(function(){
+    var role;
+    if (this.id == "exec"){
+      role = "exec";
+      console.log(role);
+    }
+    else if(this.id =="mgr"){
+      role = "mgr";
+      console.log(role);
+    }
+    else if(this.id =="datauser"){
+      role = "dataowner";
+      console.log(role);
+    }
 
-//user clicks "next page": role selection container hidden and dept selection displayed; progressbar is set
-//$("#role-select").hide();
+    $('#progress-status').val(50);
+    $('#role-select').hide();
+    $('#dept-select').show();
+    //user can search and click on one or more dept names
+    new SlimSelect({
+      select: '#multi-select-dept',
+      placeholder: 'Select Department(s)',
+      showSearch: true, // shows search field
+      searchText: 'Sorry, no matches found',
+      beforeOnChange: (info) => {
+        console.log('searching')
+      },
+      onChange: (info) => {
+        console.log('selected')
+    }
+    })
+    $('#next_btn1').show();
+    console.log("next button clicked again");
+    console.log(counter);
+  });
 
-//user clicks on one or more dept names and clicks "add"
+  //case 2: user clicks on next button to move to source selection; back and next buttons visible
+  case 2: $('#next_btn1 #nxt-pg').click(function(){
+    $('#progress-status').val(75);
+    $('#dept-select').hide();
+    $('#src-select').show();
+    //user clicks on one or more sources and clicks "add"
+    new SlimSelect({
+        select: '#multi-select-src',
+        placeholder: 'Select Source(s)',
+        showSearch: true, // shows search field
+        searchText: 'Sorry, no matches found',
+        beforeOnChange: (info) => {
+          console.log('searching')
+        },
+        onChange: (info) => {
+          console.log('selected')
+      }
+    })
+    $('#next_btn1').hide();
+    $('#next_btn2').show();
+    console.log("next button clicked again");
+    counter = 3;
+    console.log(counter);
+  });
 
-//dept names are stored and displayed in display box
+  //case 3: user clicks on next button to move to completion page; back and next buttons visible
+  case 3: $('#next_btn2 #nxt-pg').click(function(){
+    $('#progress-status').val(100);
+    $('#src-select').hide();
+    $('#finish-pg').show();
+    $('#next_btn2').hide();
+    console.log("next button clicked again");
+    counter = 3;
+    console.log(counter);
+  });
 
-//user clicks "next page": dept selection container hidden and src selection displayed; progressbar is set
-//$("#dept-select").hide();
-
-//user clicks on one or more sources and clicks "add"
-
-//source names are stored and displayed in display box
-
-//user clicks "next page": src selection container hidden and success page displayed; progressbar is set
-//$("#src-select").hide();
+  //case 4: user clicks on enter button to go to dashboard page
+  case 4: $('#finish-pg #nxt-pg').click(function(){
+    $('#finish-pg').hide();
+    console.log("next button clicked again");
+    counter = 3;
+    console.log(counter);
+  });
+  break;
+}
