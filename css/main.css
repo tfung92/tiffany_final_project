@@ -78,7 +78,6 @@ button{
 /*style for the main body container containing the navigation panel, alert container, and trend graph container*/
 .container{
   display:flex;
-  background-color: #EFEFEF;
   border-radius: 3px;
   margin-right:10px;
 }
@@ -88,7 +87,6 @@ button{
   font-size:20px;
   font-weight: bold;
   width:10%;
-  background-color: #F7F5E6;
   color:#333A56;
   height:100%;
   text-align:center;
@@ -112,7 +110,7 @@ button{
   width:100%;
 }
 
-/*test zoom*/
+/*zoom in buttons*/
 .center_container:before{
     content: "";
     position: fixed;
@@ -120,9 +118,8 @@ button{
     right: 0;
     z-index: -1;
     display: block;
-    width: 150%;
-    height: 150%;
-    top:-20px;
+    width: 100%;
+    height: 100%;
     left:-20px;
 }
 
@@ -132,15 +129,14 @@ button{
 }
 
 .alert_container{
-  height:170px;
+  height:150px;
   display:flex;
   align-items:flex-start;
-  justify-content:space-around;
+  justify-content:center;
   flex-wrap:wrap;
-  background-color: #A9A9A9;
   border-radius: 3px;
 
-/*test zoom*/
+/*zoom effects*/
 -webkit-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
 -moz-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
 box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
@@ -149,8 +145,8 @@ box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
 .alert_container button{
   height:100px;
   width:100px;
-  background-color: #CDCDCD
-  width:200px;
+  background-color: #CDCDCD;
+  width:100px;
 /*test zoom*/
     -webkit-animation:scaledown 1s linear;
     -moz-animation:scaledown 1s linear;
@@ -158,6 +154,12 @@ box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
     transform-origin:50% 50%;
     animation-fill-mode: forwards;
   }
+
+.bucket{
+  height:91%;
+  border-style:solid;
+  border-color: #CDCDCD;
+}
 
 .bucket:hover{
     z-index:100;
@@ -194,7 +196,7 @@ box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
   flex-wrap:wrap;
   align-items: center;
   justify-content:center;
-  color:white;
+  color:#333A56;
   font-size: 14px;
   margin-top:5px;
 }
