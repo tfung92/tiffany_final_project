@@ -2,95 +2,99 @@
 <!--DEVELOPED DECEMBER 2017-->
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Set Up Your Dashboard</title>
-  <meta name="Tiffany Fung" content="configure data management portal">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300i,400,600" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.6.1/slimselect.min.css">
-  <link rel="stylesheet" href="css/setup.css">
+	<meta charset="utf-8">
+	<title>Set Up Your Dashboard</title>
+	<meta content="Configure data management portal" name="Setup Page for Data Management Portal">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300i,400,600" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.6.1/slimselect.min.css" rel="stylesheet" type="text/css">
+	<link href="css/setup.css" rel="stylesheet">
 </head>
-
 <body>
-  <div class = "progress_txt">
-  <h3>Current Progress</h3>
-  <progress class = "progress-bar" id = "progress-status" max="100" value="30"></progress>
-</div>
-<!--container containing all selection questions-->
-
-  <div class = "main-container">
-    <div class = "start-container"  id = "start-container">
-    <h2 class = "get-started" id = "start">To get started, please answer a few questions to customize your dashboard.</h2>
-    <button class = "start-btn" id = "start-btn">Get Started!</button>
-  </div>
-<!--container containing the role selection buttons-->
-  <form class = "role-selection" id = "role-select">
-    <div class = "exec-container">
-    <input type="button" class = "button" id = "exec">
-      <h3>Do you oversee a department?</h3>
-      <p>Do you desire to see the overall health of the data</p>
-    </input>
-  </div>
-  <div class = "mgr-container">
-    <input type="button" class = "button" id = "mgr">
-      <h3>Do you oversee an application team?</h3>
-      <p>Do you desire to see the health of your teams' specific data</p>
-    </input>
-  </div>
-    <div class = "user-container">
-    <input type="button" class = "button" id = "datauser">
-      <h3>Are you a data owner?</h3>
-      <p>Do you desire to see your specific data details</p>
-    </input>
-  </div>
-  </form>
-
-<!--container containing the department selection box-->
-  <div class = "dept-selection" id = "dept-select">
-    <h2>Select your department in order to focus your dashboard data.</h2>
-    <div class = "selection-container">
-      <select multiple class = "multi-select" id = "multi-select-dept">
-      <option value="cc">Credit Card</option>
-      <option value="cml_bank">Commercial Bank</option>
-      <option value="mktg">Marketing</option>
-      <option value="hr">HR</option>
-    </select>
-  </div>
-  </div>
-
-<!--container containing the source selection box-->
-  <div class = "src-selection" id = "src-select">
-    <h2>Select a source if you would like to further focus your dashboard data.</h2>
-    <div class = "selection-container">
-    <select multiple class = "multi-select" id = "multi-select-src">
-      <option value="src1">Source 1</option>
-      <option value="src2">Source 2</option>
-      <option value="src3">Source 3</option>
-      <option value="src4">Source 4</option>
-    </select>
-  </div>
-  </div>
-
-  <!--container for finish page-->
-    <div class = "finish-pg" id = "finish-pg">
-      <h2>The setup is complete!</h2>
-      <button class = "nxt-pg" id = "nxt-pg"><a href="index.html">Enter Dashboard</a></button>
-    </div>
-    <div class = "footer-buttons" id = "next_btn1">
-      <!--  <button class = "back-pg" id = "back-pg">Previous Page</button>-->
-      <button class = "nxt-pg" id = "nxt-pg">Next Page</button>
-    </div>
-    <div class = "footer-buttons" id = "next_btn2">
-    <!--  <button class = "back-pg" id = "back-pg">Previous Page</button>-->
-      <button class = "nxt-pg" id = "nxt-pg">Next Page</button>
-    </div>
-</div>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.6.1/slimselect.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
-  <script src="js/setup_page.js"></script>
+	<div class="progress_txt">
+		<h3>Current Progress</h3><progress class="progress-bar" id="progress-status" max="100" value="30"></progress>
+	</div><!--container containing all selection questions-->
+	<div class="main-container">
+		<div class="start-container" id="start-container">
+			<h2 class="get-started" id="start">To get started, please answer a few questions to customize your dashboard.</h2><button class="start-btn" id="start-btn">Get Started!</button>
+		</div><!--container containing the role selection buttons-->
+		<form class="role-selection" id="role-select" name="role-select">
+			<div class="exec-container">
+				<input class="button" id="exec" type="button">
+				<h3>Do you oversee a department?</h3>
+				<p>Do you desire to see the overall health of the data</p>
+			</div>
+			<div class="mgr-container">
+				<input class="button" id="mgr" type="button">
+				<h3>Do you oversee an application team?</h3>
+				<p>Do you desire to see the health of your teams' specific data</p>
+			</div>
+			<div class="user-container">
+				<input class="button" id="datauser" type="button">
+				<h3>Are you a data owner?</h3>
+				<p>Do you desire to see your specific data details</p>
+			</div>
+		</form><!--container containing the department selection box-->
+		<div class="dept-selection" id="dept-select">
+			<h2>Select your department in order to focus your dashboard data.</h2>
+			<div class="selection-container">
+				<select class="multi-select" id="multi-select-dept" multiple>
+					<option value="cc">
+						Credit Card
+					</option>
+					<option value="cml_bank">
+						Commercial Bank
+					</option>
+					<option value="mktg">
+						Marketing
+					</option>
+					<option value="hr">
+						HR
+					</option>
+				</select>
+			</div>
+		</div><!--container containing the source selection box-->
+		<div class="src-selection" id="src-select">
+			<h2>Select a source if you would like to further focus your dashboard data.</h2>
+			<div class="selection-container">
+				<select class="multi-select" id="multi-select-src" multiple>
+					<option value="src1">
+						Source 1
+					</option>
+					<option value="src2">
+						Source 2
+					</option>
+					<option value="src3">
+						Source 3
+					</option>
+					<option value="src4">
+						Source 4
+					</option>
+				</select>
+			</div>
+		</div><!--container for finish page-->
+		<div class="finish-pg" id="finish-pg">
+			<h2>The setup is complete!</h2><button class="nxt-pg" id="nxt-pg"><a href="index.html">Enter Dashboard</a></button>
+		</div>
+		<div class="footer-buttons" id="next_btn1">
+			<!--  <button class = "back-pg" id = "back-pg">Previous Page</button>-->
+			<button class="nxt-pg" id="nxt-pg">Next Page</button>
+		</div>
+		<div class="footer-buttons" id="next_btn2">
+			<!--  <button class = "back-pg" id = "back-pg">Previous Page</button>-->
+			<button class="nxt-pg" id="nxt-pg">Next Page</button>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.6.1/slimselect.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js">
+	</script>
+	<script src="js/setup_page.js">
+	</script>
 </body>
 </html>

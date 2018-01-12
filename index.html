@@ -2,76 +2,79 @@
 <!--DEVELOPED DECEMBER 2017-->
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Manage Your Data</title>
-  <meta name="Tiffany Fung" content="data management portal">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300i,400,600" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-  <link rel="stylesheet" href="css/flickity.min.css" media="screen">
-  <link rel="stylesheet" href="css/main.css">
+	<meta charset="utf-8">
+	<title>Manage Your Data</title>
+	<meta content="data management portal" name="Data Management Portal Dashboard">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300i,400,600" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+	<link href="css/flickity.min.css" media="screen" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 </head>
-
 <body>
-<!--SET HEADER WITH LOGO-->
-    <header class = "nav_header">
-      <div><img src="http://www.hanzolabs.com/img/datamanagement.jpg" class = "logo"></div>
-      <div><h1 class = "title">Data Management Dashboard</h1></div>
-      <div><p class = "refreshed">Data Refreshed: 01/08/2018</p></div>
-    </header>
-<!--SET MAIN CONTAINER FOR THE WEBPAGE-->
-  <div class = "container">
-<!--SET NAVIGATION PANEL WITH LINKS TO DIFFERENT PAGES-->
-      <nav class = "nav_panel">
-        <button class = "dashLink"><a href="index.html"><img src="img/dash_icon.png" alt = "dashboard_icon" class = "nav_icon"></a></button></br>
-        <button class = "NotifLink"><img src="img/notify_icon.png" alt = "notification_icon" class = "nav_icon"></button></br>
-        <button class = "SettingLink"><a href="setup_index.html"><img src="img/settings_icon.png" alt = "settings_icon" class = "nav_icon"></a></button></br>
-        <button class = "LogOutLink"><a href="landing_page.html"><img src="img/logout_icon.png" alt = "logout_icon" class = "nav_icon"></a></button><br>
-      </nav>
-<!--MAIN CENTER CONTAINER CONTAINS ALERT ITEM SECTION CONTAINING ITEM BUCKETS AND TREND GRAPH CONTAINER-->
-  <div class = "center_container">
-      <section class = "alert_container">
-<!--Each bucket is a clickable button that leads to drill down pages-->
-        <div class = "bucket operationsBucket">
-          <button class = "operationsBucket" id = "nav_bucket"> <img src="img/operations_icon.png" alt = "operations_icon" class = "icon"></button>
-          <p>Operations<span class = "operationsTooltip"></span></br></p>
-        </div>
-        <div class = "bucket insightsBucket">
-          <button class = "insightsBucket" id = "nav_bucket"> <img src="img/insights_icon.png" alt = "insights_icon" class = "icon"></button>
-          <p>Insights<span class = "insightsTooltip"></span></br></p>
-        </div>
-        <div class = "bucket workflowBucket">
-          <button class = "workflowBucket" id = "nav_bucket"> <img src="img/workflow_icon.png" alt = "workflow_icon" class = "icon"></button>
-          <p>Workflow<span class = "workflowLink"></span></p>
-        </div>
-        <div class = "bucket sourcesBucket">
-        <button class = "sourcesBucket" id = "nav_bucket"> <img src="img/source_icon.png" alt = "source_icon" class = "icon"></button>
-        <p>Sources<span class = "sourceTooltip"></span></br></p>
-      </div>
-      <div class = "bucket usage">
-        <button class = "usage" id = "nav_bucket"> <img src="img/usage_icon.png" alt = "usage_icon" class = "icon"></button>
-        <p>Usage<span class = "usageTooltip"></span></br></p>
-      </div>
-      </section>
-<!--MAIN LOWER SECTION OF PAGE CONTAINS PROGRESS TREND GRAPHS-->
-      <h1 class = "trend-title"></h1>
-      <div class="main-carousel">
-         <div class="carousel-cell iframe-wrap">
-            <iframe src="https://public.tableau.com/en-us/s/gallery/boeing-current-market-outlook?gallery=featured:embed=y&:display_count=no&:showVizHome=no" frameborder="0">
-            </iframe>
-        </div>
-        <div class="carousel-cell">
-          <iframe src="https://public.tableau.com/en-us/s/gallery/most-frequent-words-unhcr-speeches" frameborder="0">
-          </iframe>
-        </div>
-        <div class="carousel-cell">
-          <iframe src="https://public.tableau.com/en-us/s/gallery/exploration-beer?gallery=votd" frameborder="0">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="js/flickity.pkgd.min.js"></script>
-  <script src="js/main.js"></script>
+	<!--SET HEADER WITH LOGO-->
+	<header class="nav_header">
+		<div><img class="logo" src="http://www.hanzolabs.com/img/datamanagement.jpg"></div>
+		<div>
+			<h1 class="title">Data Management Dashboard</h1>
+		</div>
+		<div>
+			<p class="refreshed">Data Refreshed: 01/08/2018</p>
+		</div>
+	</header><!--SET MAIN CONTAINER FOR THE WEBPAGE-->
+	<div class="container">
+		<!--SET NAVIGATION PANEL WITH LINKS TO DIFFERENT PAGES-->
+		<nav class="nav_panel">
+			<button class="dashLink"><a href="index.html"><img alt="dashboard_icon" class="nav_icon" src="img/dash_icon.png"></a></button><br>
+			<button class="NotifLink"><img alt="notification_icon" class="nav_icon" src="img/notify_icon.png"></button><br>
+			<button class="SettingLink"><a href="setup_index.html"><img alt="settings_icon" class="nav_icon" src="img/settings_icon.png"></a></button><br>
+			<button class="LogOutLink"><a href="landing_page.html"><img alt="logout_icon" class="nav_icon" src="img/logout_icon.png"></a></button><br>
+		</nav><!--MAIN CENTER CONTAINER CONTAINS ALERT ITEM SECTION CONTAINING ITEM BUCKETS AND TREND GRAPH CONTAINER-->
+		<div class="center_container">
+			<section class="alert_container">
+				<!--Each bucket is a clickable button that leads to drill down pages (to come)-->
+				<div class="bucket operationsBucket">
+					<button class="operationsBucket" id="nav_bucket"><img alt="operations_icon" class="icon" src="img/operations_icon.png"></button>
+					<p>Operations<span class="operationsTooltip"></span><br></p>
+				</div>
+				<div class="bucket insightsBucket">
+					<button class="insightsBucket" id="nav_bucket"><img alt="insights_icon" class="icon" src="img/insights_icon.png"></button>
+					<p>Insights<span class="insightsTooltip"></span><br></p>
+				</div>
+				<div class="bucket workflowBucket">
+					<button class="workflowBucket" id="nav_bucket"><img alt="workflow_icon" class="icon" src="img/workflow_icon.png"></button>
+					<p>Workflow<span class="workflowLink"></span></p>
+				</div>
+				<div class="bucket sourcesBucket">
+					<button class="sourcesBucket" id="nav_bucket"><img alt="source_icon" class="icon" src="img/source_icon.png"></button>
+					<p>Sources<span class="sourceTooltip"></span><br></p>
+				</div>
+				<div class="bucket usage">
+					<button class="usage" id="nav_bucket"><img alt="usage_icon" class="icon" src="img/usage_icon.png"></button>
+					<p>Usage<span class="usageTooltip"></span><br></p>
+				</div>
+			</section><!--MAIN LOWER SECTION OF PAGE CONTAINS PROGRESS TREND GRAPHS-->
+			<h1 class="trend-title"></h1>
+			<div class="main-carousel">
+				<div class="carousel-cell iframe-wrap">
+					<!--Embedding iframes to expose Tableau pages-->
+					 <iframe frameborder="0" src="https://public.tableau.com/en-us/s/gallery/boeing-current-market-outlook?gallery=featured:embed=y&:display_count=no&:showVizHome=no"></iframe>
+				</div>
+				<div class="carousel-cell">
+					<iframe frameborder="0" src="https://public.tableau.com/en-us/s/gallery/most-frequent-words-unhcr-speeches"></iframe>
+				</div>
+				<div class="carousel-cell">
+					<iframe frameborder="0" src="https://public.tableau.com/en-us/s/gallery/exploration-beer?gallery=votd"></iframe>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+		</script>
+		<script src="js/flickity.pkgd.min.js">
+		</script>
+		<script src="js/main.js">
+		</script>
+	</div>
 </body>
 </html>
